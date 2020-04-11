@@ -4,18 +4,19 @@
     <div class="container">
         <form action="" method="post" class="form-group">
             <div class="form-group">
-                <label for="course-item">Course Item</label>
-                <input type="text" name="course-item">
+                <div class="label"><label for="course-item">Course Item</label></div>
+                <div class="input"><input type="text" name="course-item"></div>
             </div>
             <div class="form-group">
-                <label for="worth-percent">Worth (in %)</label>
-                <input type="text" name="worth-percent">
+                <div class="label"><label for="worth-percent">Worth (in %)</label></div>
+                <div class="input"><input type="text" name="worth-percent"></div>
             </div>
             <div class="form-group">
-                <label for="worth-percent">Your Mark (in %)</label>
-                <input type="text" name="mark-percent">
+                <div class="label"><label for="worth-percent">Your Mark (in %)</label></div>
+                <div class="input"><input type="text" name="mark-percent"></div>
             </div>
             <button type="submit" class="btn btn-primary">Add Entry</button>
+            <button class="btn btn-warning">Clear Entry</button>
         </form>
 
         <table class="table">

@@ -4,16 +4,16 @@
     <div class="container">
         <form action="" method="post" class="form-group">
             <div class="form-group">
-                <div class="form-label"><label for="course-item">Course Item</label></div>
-                <div class="form-input"><input type="text" name="course-item"></div>
+                <div class="form-label"><label for="course_item">Course Item</label></div>
+                <div class="form-input"><input type="text" name="course_item"></div>
             </div>
             <div class="form-group">
-                <div class="form-label"><label for="worth-percent">Worth (in %)</label></div>
-                <div class="form-input"><input type="text" name="worth-percent"></div>
+                <div class="form-label"><label for="worth_percent">Worth (in %)</label></div>
+                <div class="form-input"><input type="text" name="worth_percent"></div>
             </div>
             <div class="form-group">
-                <div class="form-label"><label for="worth-percent">Your Mark (in %)</label></div>
-                <div class="form-input"><input type="text" name="mark-percent"></div>
+                <div class="form-label"><label for="mark_percent">Your Mark (in %)</label></div>
+                <div class="form-input"><input type="text" name="mark_percent"></div>
             </div>
             <button type="submit" class="btn btn-primary">Add Entry</button>
             <button class="btn btn-warning">Clear Entry</button>

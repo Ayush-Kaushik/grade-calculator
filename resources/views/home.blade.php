@@ -5,8 +5,8 @@
     <div class="container">
         <form action="" method="post" class="form-group">
             <div class="form-group">
-                <label for="course-name">Course Name</label>
-                <input type="text" name="course-name">
+                <label for="course_name">Course Name</label>
+                <input type="text" name="course_name">
             </div>
             <button type="submit" class="btn btn-submit">Add</button>
             <button class="btn btn-warning">Clear</button>

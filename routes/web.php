@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/home','CalculatorControler@show');
+Route::post('/addEntry','CalculatorControler@addEntry');

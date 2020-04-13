@@ -2,7 +2,7 @@
 @section('content')
     <h1>Course title: {course-title}</h1>
     <div class="container">
-        <form action="" method="post" class="form-group">
+        <form action="{{ action('CalculatorController@addEntry') }}" method="post" class="form-group">
             <div class="form-group">
                 <div class="form-label"><label for="course_item">Course Item</label></div>
                 <div class="form-input"><input type="text" name="course_item"></div>

@@ -15,7 +15,9 @@ class CalculatorControler extends BaseController
     }
 
     public function addEntry(Request $request) {
-        print_r($request->course_name);
+        print_r($request->course_item);
+        print_r($request->worth_percent);
+        print_r($request->mark_percent);
     }
 }
 

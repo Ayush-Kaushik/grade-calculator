@@ -1,34 +1,15 @@
 @extends('layout.main')
 @section('content')
-    <h1>Grade Calculator</h1>
+    <h1>Welcome to Grade Calculator!</h1>
+    <h2>Enter your code name or code</h2>
     <div class="container">
         <form action="" method="post" class="form-group">
             <div class="form-group">
-                <div class="form-label"><label for="course-item">Course Item</label></div>
-                <div class="form-input"><input type="text" name="course-item"></div>
+                <label for="course-name">Course Name</label>
+                <input type="text" name="course-name">
             </div>
-            <div class="form-group">
-                <div class="form-label"><label for="worth-percent">Worth (in %)</label></div>
-                <div class="form-input"><input type="text" name="worth-percent"></div>
-            </div>
-            <div class="form-group">
-                <div class="form-label"><label for="worth-percent">Your Mark (in %)</label></div>
-                <div class="form-input"><input type="text" name="mark-percent"></div>
-            </div>
-            <button type="submit" class="btn btn-primary">Add Entry</button>
-            <button class="btn btn-warning">Clear Entry</button>
+            <button type="submit" class="btn btn-submit">Add</button>
+            <button class="btn btn-warning">Clear</button>
         </form>
-
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Item</th>
-                <th scope="col">Worth (in %)</th>
-                <th scope="col">Your Mark (in %)</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
     </div>
 @endsection

@@ -10,14 +10,16 @@ use Illuminate\Routing\Controller as BaseController;
 
 class CalculatorControler extends BaseController
 {
-    public function show() {
+
+    public function index()
+    {
         return view('calculator');
     }
 
-    public function addEntry(Request $request) {
+    public function addEntry(Request $request)
+    {
         print_r($request->course_item);
         print_r($request->worth_percent);
         print_r($request->mark_percent);
     }
 }
-

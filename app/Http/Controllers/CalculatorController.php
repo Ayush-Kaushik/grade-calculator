@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Client\Request;
 use Illuminate\Routing\Controller as BaseController;
 
-class CalculatorControler extends BaseController
+class CalculatorController extends BaseController
 {
 
     public function index()

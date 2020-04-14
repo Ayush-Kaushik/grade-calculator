@@ -16,7 +16,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', 'HomeController@index');
-Route::post('/','CalculatorControler@new');
-Route::get('/calculator','CalculatorControler@index');
-Route::post('/calculator','CalculatorControler@addEntry');
-Route::resource('calculator', 'CalculatorControler');
+Route::post('/','CalculatorController@new');
+Route::get('/calculator','CalculatorController@index');
+Route::post('/calculator','CalculatorController@addEntry');
+Route::resource('calculator', 'CalculatorController');

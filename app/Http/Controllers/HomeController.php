@@ -16,6 +16,6 @@ class HomeController extends Controller
     public function create(Request $request)
     {
         $course_title = $request->course_name;
-        return redirect('/calculator', compact('course_title'));
+        return view('/calculator', compact('course_title'));
     }
 }

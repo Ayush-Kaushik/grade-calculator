@@ -15,10 +15,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::post('/home','HomeController@new');
+Route::get('/','HomeController@index');
+Route::get('/home','HomeController@index');
 Route::get('/calculator','CalculatorController@index');
-Route::post('/calculator','CalculatorController@addEntry');
+
+Route::post('/home','HomeController@create');
+Route::post('/calculator','CalculatorController@create');
 
 Route::resource('home', 'HomeController');
 Route::resource('calculator', 'CalculatorController');

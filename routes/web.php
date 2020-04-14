@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CalculatorControler;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +15,8 @@ use App\Http\Controllers\CalculatorControler;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
+Route::get('/', 'HomeController@index');
 Route::post('/','CalculatorControler@new');
 Route::get('/calculator','CalculatorControler@index');
-
 Route::post('/calculator','CalculatorControler@addEntry');
-
-
 Route::resource('calculator', 'CalculatorControler');

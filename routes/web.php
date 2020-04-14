@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home','CalculatorControler@index');
-Route::post('/home','CalculatorControler@addEntry');
+Route::get('/calculator','CalculatorControler@index');
+Route::post('/calculator','CalculatorControler@addEntry');
 
-Route::resource('home', 'CalculatorControler');
+Route::resource('calculator', 'CalculatorControler');

@@ -1,10 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Client\Request;
 use Illuminate\Routing\Controller as BaseController;
 
@@ -16,10 +12,15 @@ class CalculatorControler extends BaseController
         return view('calculator');
     }
 
-    public function addEntry(Request $request)
+    public function create(Request $request)
     {
         print_r($request->course_item);
         print_r($request->worth_percent);
         print_r($request->mark_percent);
+    }
+
+    public function new(Request $request) {
+        $course_title = $request->course_name;
+        return view('calculator', compact('course_title'));
     }
 }

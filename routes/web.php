@@ -18,7 +18,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::post('/','CalculatorControler@new');
 Route::get('/calculator','CalculatorControler@index');
+
 Route::post('/calculator','CalculatorControler@addEntry');
+
 
 Route::resource('calculator', 'CalculatorControler');

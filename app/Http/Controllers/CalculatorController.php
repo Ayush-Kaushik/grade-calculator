@@ -18,9 +18,4 @@ class CalculatorController extends BaseController
         print_r($request->worth_percent);
         print_r($request->mark_percent);
     }
-
-    public function new(Request $request) {
-        $course_title = $request->course_name;
-        return view('calculator', compact('course_title'));
-    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Client\Request;
 use Illuminate\Routing\Controller as BaseController;
 
@@ -12,7 +13,7 @@ class HomeController extends BaseController
         return view('home');
     }
 
-    public function create(Request $request)
+    public function new(Request $request)
     {
         print_r($request->course_name);
         // return redirect('calculator');

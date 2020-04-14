@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('content')
-    <h1>Course title: {course_title}</h1>
+    <h1>Course title: {{$course_title}}</h1>
     <div class="container">
         <form action="{{ action('CalculatorController@create') }}" method="post" class="form-group">
             {{ csrf_field() }}

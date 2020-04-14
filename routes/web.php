@@ -19,7 +19,7 @@ Route::get('/','HomeController@index');
 Route::get('/home','HomeController@index');
 Route::get('/calculator','CalculatorController@index');
 
-Route::post('/home','HomeController@create');
+Route::post('/home/create','HomeController@create');
 Route::post('/calculator','CalculatorController@create');
 
 Route::resource('home', 'HomeController');

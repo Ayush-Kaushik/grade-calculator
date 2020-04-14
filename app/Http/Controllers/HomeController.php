@@ -16,6 +16,6 @@ class HomeController extends Controller
     public function create(Request $request)
     {
         $request->session()->put('course_title', $request->course_name);
-        return view('/calculator', compact('course_title'));
+        return view('/calculator');
     }
 }

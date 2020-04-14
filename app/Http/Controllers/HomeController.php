@@ -15,7 +15,7 @@ class HomeController extends BaseController
 
     public function create(Request $request)
     {
-        print_r($request->course_name);
-        // return redirect('calculator');
+        // print_r($request->course_name);
+        return redirect('/calculator');
     }
 }

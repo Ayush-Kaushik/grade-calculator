@@ -13,7 +13,7 @@ class HomeController extends BaseController
         return view('home');
     }
 
-    public function create(Request $request)
+    public function create()
     {
         // print_r($request->course_name);
         return redirect('/calculator');

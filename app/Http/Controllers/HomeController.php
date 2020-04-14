@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Client\Request;
-use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
-class HomeController extends BaseController
+class HomeController extends Controller
 {
 
     public function index()
@@ -13,9 +13,9 @@ class HomeController extends BaseController
         return view('home');
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        // print_r($request->course_name);
-        return redirect('/calculator');
+        print_r($request->course_name);
+        // return redirect('/calculator');
     }
 }

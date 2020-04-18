@@ -59,9 +59,15 @@
           @if(Session::has('current_mark'))
             <p>Your current Mark is {{Session::get('current_mark')}}%</p>
           @endif
-          
+
           @if(Session::has('final_exam_worth'))
             <p>Final exam worth {{Session::get('final_exam_worth')}}%</p>
+          @endif
+
+          @if(Session::has('final_exam_stats'))
+            @foreach (Session::get('final_exam_stats') as $itemKey => $itemValue)
+                <p>To finish with {{$itemKey}} required on final: {{$itemValue}}%</p>
+            @endforeach
           @endif
         <div>
         </div>

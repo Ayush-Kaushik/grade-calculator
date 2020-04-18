@@ -37,8 +37,13 @@ class CalculatorController extends Controller
 
         $currentMark = $this->getCurrentMark($marksList);
         $finalExamWorth = $this->getFinalExamPercent($marksList);
+        $finalExamStats = $this->getFinalExamStats($marksList);
+
+
         session()->put('current_mark', $currentMark);
         session()->put('final_exam_worth', $finalExamWorth);
+        session()->put('final_exam_stats', $finalExamStats);
+        
         return view('calculator');
     }
 
@@ -66,6 +71,33 @@ class CalculatorController extends Controller
         return (100.0 - $currentMark);
     }
 
+    public function getFinalExamStats($marksList) {
+        $currentMark = 0.0;
+        $percentCovered = 0.0;
+        foreach($marksList as $marks) {
+            $currentMark = $currentMark + (($marks['worth_percent']/100) * $marks['mark_percent']);
+            $percentCovered = $percentCovered + $marks['worth_percent'];
+        }
+
+        $finishWithFifty = (50.0 - $currentMark) / $percentCovered;
+        $finishWithSixty = (60.0 - $currentMark) / $percentCovered;
+        $finishWithSeventy = (70.0 - $currentMark) / $percentCovered;
+        $finishWithEighty = (80.0 - $currentMark) / $percentCovered;
+        $finishWithNinty = (80.0 - $currentMark) / $percentCovered;
+        $finishWithHundred = (80.0 - $currentMark) / $percentCovered;
+
+        $finalStats = array(
+            "finish_with_fifty" => $finishWithFifty,
+            "finish_with_sixty" => $finishWithSixty,
+            "finish_with_seventy" => $finishWithSeventy,
+            "finish_with_eighty" => $finishWithEighty,
+            "finish_with_ninty" => $finishWithNinty,
+            "finish_with_hundred" => $finishWithHundred,
+        );
+
+        return $finalStats;
+    }
+
     /**
      * Remove a record from the table
      */
@@ -81,4 +113,7 @@ class CalculatorController extends Controller
         session()->put('marks_list', $marksList);
         return view('calculator');
     }
+
+
+
 }

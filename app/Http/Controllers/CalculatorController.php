@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -19,10 +20,18 @@ class CalculatorController extends Controller
             'mark_percent' => 'required|numeric|between:0,100.00'
         ]);
 
+        $item = array(
+            "course_item" => $request->course_item,
+            "worth_percent" => $request->worth_percent,
+            "mark_percent" => $request->mark_percent
+        );
+
         $marksList = session()->get('marks_list');
 
         if ($marksList == NULL or $marksList->empty()) {
             session()->put('marks_list', []);
+        } else {
+            array_push($marksList, $item);
         }
 
         return view('calculator', compact('marksList'));

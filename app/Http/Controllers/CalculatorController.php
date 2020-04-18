@@ -41,7 +41,7 @@ class CalculatorController extends Controller
          */
         $currentMark = 0.0;
         foreach($marksList as $marks) {
-            $currentMark = $currentMark + (($marks['worth_percent']/100) * ($marks['mark_percent']/100));
+            $currentMark = $currentMark + (($marks['worth_percent']/100) * $marks['mark_percent']);
             print_r($currentMark);
         }
 

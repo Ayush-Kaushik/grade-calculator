@@ -37,6 +37,13 @@
               </tr>
             </thead>
             <tbody>
+                @foreach ($marksList as $item)
+                    <tr>
+                        <td>{{$item['course_item']}}</td>
+                        <td>{{$item['worth_percent']}}</td>
+                        <td>{{$item['mark_percent']}}</td>        
+                    </tr>
+                @endforeach
             </tbody>
           </table>
         <div>

@@ -14,13 +14,17 @@ class CalculatorController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-            'course_item' => 'required',
-            'worth_percent' => 'required',
-            'mark_percent' => 'required'
+            'course_item' => 'required|numeric|between:0,100.00',
+            'worth_percent' => 'required|numeric|between:0,100.00',
+            'mark_percent' => 'required|numeric|between:0,100.00'
         ]);
 
-        print_r($request->course_item);
-        print_r($request->worth_percent);
-        print_r($request->mark_percent);
+        $marksList = session()->get('marks_list');
+
+        if ($marksList == NULL or $marksList->empty()) {
+            session()->set('marks_list', []);
+        }
+
+        return view('calculator', compact('marksList'));
     }
 }

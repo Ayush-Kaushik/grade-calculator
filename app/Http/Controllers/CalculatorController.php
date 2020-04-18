@@ -15,7 +15,7 @@ class CalculatorController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-            'course_item' => 'required|numeric|between:0,100.00',
+            'course_item' => 'required',
             'worth_percent' => 'required|numeric|between:0,100.00',
             'mark_percent' => 'required|numeric|between:0,100.00'
         ]);
@@ -32,10 +32,11 @@ class CalculatorController extends Controller
             array_push($marksList, $item);
             session()->put('marks_list', $marksList);
         } else {
+            print_r($marksList);
             array_push($marksList, $item);
             session()->put('marks_list', $marksList);
         }
 
-        return view('calculator');
+        // return view('calculator');
     }
 }

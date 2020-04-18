@@ -1,7 +1,7 @@
 @extends('layout.main')
 @section('content')
-    <div class="bg-gradient-primary">
         <div class="container">
+            <div class="card-body">
             <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Grade Calculator</h1>
             </div>

@@ -53,10 +53,6 @@ class CalculatorController extends Controller
      */
     public function destroy($id) {
         $marksList = session()->get('marks_list');
-        
-        foreach($marksList as $item) {
-            if(item[])
-        }
-
+        print_r($id);
     }
 }

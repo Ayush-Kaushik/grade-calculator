@@ -37,6 +37,6 @@ class CalculatorController extends Controller
 
         var_dump(session()->get('marks_list'));
 
-        // return view('calculator', compact('marksList'));
+        return view('calculator');
     }
 }

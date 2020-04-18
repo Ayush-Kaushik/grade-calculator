@@ -26,8 +26,10 @@ class CalculatorController extends Controller
             "mark_percent" => $request->mark_percent
         );
 
+        print_r($item);
+
         $marksList = session()->get('marks_list');
-        var_dump($marksList);
+        print_r($marksList);
 
         if ($marksList == NULL or $marksList->empty()) {
             session()->put('marks_list', []);
@@ -36,7 +38,7 @@ class CalculatorController extends Controller
             session()->put('marks_list', $marksList);
         }
 
-        var_dump(session()->get('marks_list'));
+        print_r(session()->get('marks_list'));
 
         // return view('calculator');
     }

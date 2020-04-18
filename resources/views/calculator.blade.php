@@ -59,6 +59,10 @@
           @if(Session::has('current_mark'))
             <p>Your current Mark is {{Session::get('current_mark')}}%</p>
           @endif
+          
+          @if(Session::has('final_exam_worth'))
+            <p>Final exam worth {{Session::get('final_exam_worth')}}%</p>
+          @endif
         <div>
         </div>
     </div>

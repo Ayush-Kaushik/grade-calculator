@@ -3,18 +3,3 @@ html, body {
     font-weight: 200;
     margin: 0;
 }
-
-.form-label, .form-input {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.form-label {
-    width: 120px;
-    margin-right: 10px;
-    text-align: right;
-}
-
-.form-input {
-    height: 25px;
-}

@@ -53,6 +53,8 @@ class CalculatorController extends Controller
      */
     public function destroy($id) {
         $marksList = session()->get('marks_list');
-        print_r($id);
+        unset($marksList[$id]);
+        session()->put('marks_list', $marksList);
+        return view('calculator');
     }
 }

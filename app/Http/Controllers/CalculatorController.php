@@ -35,9 +35,7 @@ class CalculatorController extends Controller
             array_push($marksList, $item);
             session()->put('marks_list', $marksList);
         }
-
-        print_r(session()->get('marks_list'));
-
-        // return view('calculator');
+        
+        return view('calculator');
     }
 }

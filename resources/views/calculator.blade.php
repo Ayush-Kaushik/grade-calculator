@@ -40,9 +40,9 @@
                 @if(Session::has('marks_list'))
                     @foreach (Session::get('marks_list') as $itemKey => $itemValue)
                     <tr>
-                        <td>{{$itemValue}}</td>
-                        <td>{{$itemValue}}</td>
-                        <td>{{$itemValue}}</td>  
+                        <td>{{$itemValue['course_item']}}</td>
+                        <td>{{$itemValue['worth_percent']}}</td>
+                        <td>{{$itemValue['mark_percent']}}</td>  
                         <td>
                             <form action="{{ action('CalculatorController@destroy', $itemKey) }}" method="post">
                                 {{ method_field('DELETE') }}

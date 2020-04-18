@@ -4,12 +4,6 @@ html, body {
     margin: 0;
 }
 
-.parent-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .form-label, .form-input {
     display: inline-block;
     vertical-align: middle;

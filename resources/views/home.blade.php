@@ -6,8 +6,8 @@
             <div class="form-group">
                 <label for="course_name">Course Name</label>
                 <input type="text" name="course_name">
-                <button type="submit" class="btn btn-success">Add</button>
             </div>
+            <button type="submit" class="btn btn-success">Add</button>
         </form>
     <div>
 @endsection

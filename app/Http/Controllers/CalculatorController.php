@@ -33,6 +33,7 @@ class CalculatorController extends Controller
 
         if ($marksList == NULL or $marksList->empty()) {
             session()->put('marks_list', []);
+            array_push($marksList, $item);
         } else {
             array_push($marksList, $item);
             session()->put('marks_list', $marksList);

@@ -59,6 +59,7 @@ class CalculatorController extends Controller
         return $currentMark;
     }
 
+
     /**
      * calculate final mark
      */
@@ -81,29 +82,13 @@ class CalculatorController extends Controller
 
         $finalStats = [];
         for( $i = 50; $i <= 100; $i = $i + 10) {
-
             $finishWithScore = ($i - $currentMark) / $percentCovered;
             $finalStats[$i] = $finishWithScore;
         }
 
-        // $finishWithFifty = (50.0 - $currentMark) / $percentCovered;
-        // $finishWithSixty = (60.0 - $currentMark) / $percentCovered;
-        // $finishWithSeventy = (70.0 - $currentMark) / $percentCovered;
-        // $finishWithEighty = (80.0 - $currentMark) / $percentCovered;
-        // $finishWithNinty = (90.0 - $currentMark) / $percentCovered;
-        // $finishWithHundred = (100.0 - $currentMark) / $percentCovered;
-
-        // $finalStats = array(
-        //     "finish_with_fifty" => $finishWithFifty,
-        //     "finish_with_sixty" => $finishWithSixty,
-        //     "finish_with_seventy" => $finishWithSeventy,
-        //     "finish_with_eighty" => $finishWithEighty,
-        //     "finish_with_ninty" => $finishWithNinty,
-        //     "finish_with_hundred" => $finishWithHundred,
-        // );
-
         return $finalStats;
     }
+
 
     /**
      * Remove a record from the table
@@ -120,7 +105,4 @@ class CalculatorController extends Controller
         session()->put('marks_list', $marksList);
         return view('calculator');
     }
-
-
-
 }

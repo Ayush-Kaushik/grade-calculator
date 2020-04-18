@@ -35,17 +35,19 @@ class CalculatorController extends Controller
         array_push($marksList, $item);
         session()->put('marks_list', $marksList);
 
-        /**
-         * calculate the grades and other information
-         */
+        $currentMark = $this->getCurrentMark($marksList);
+        session()->put('current_mark', $currentMark);
+        return view('calculator');
+    }
+
+    /**
+     * get current mark
+     */
+    public function getCurrentMark($marksList) {
         $currentMark = 0.0;
         foreach($marksList as $marks) {
             $currentMark = $currentMark + (($marks['worth_percent']/100) * $marks['mark_percent']);
-            print_r($currentMark);
         }
-
-        session()->put('current_mark', $currentMark);
-        return view('calculator');
     }
 
     /**
@@ -54,6 +56,9 @@ class CalculatorController extends Controller
     public function destroy($id) {
         $marksList = session()->get('marks_list');
         unset($marksList[$id]);
+        
+        $currentMark = $this->getCurrentMark($marksList);
+        session()->put('current_mark', $currentMark);
         session()->put('marks_list', $marksList);
         return view('calculator');
     }

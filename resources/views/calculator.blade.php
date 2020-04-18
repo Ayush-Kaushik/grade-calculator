@@ -37,13 +37,15 @@
               </tr>
             </thead>
             <tbody>
-                @foreach ($marksList as $item)
+                @if(Session::has('marks_list'))
+                    @foreach (ession::get('marks_list') as $item)
                     <tr>
                         <td>{{$item['course_item']}}</td>
                         <td>{{$item['worth_percent']}}</td>
                         <td>{{$item['mark_percent']}}</td>        
                     </tr>
-                @endforeach
+                    @endforeach
+                @endif
             </tbody>
           </table>
         <div>

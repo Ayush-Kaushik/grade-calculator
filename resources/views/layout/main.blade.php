@@ -5,6 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Grade Calculator</title>
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+
+        <style>
+            html, body {
+                background-color: #fff;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
     </head>
     <body>
         @yield('content')

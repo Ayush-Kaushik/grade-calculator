@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('content')
-    <div class="parent-div">
+    <div class="flex-center">
         <form action="{{ action('HomeController@create') }}" method="post" class="form-group">
             {{ csrf_field() }}
             <div class="form-group">

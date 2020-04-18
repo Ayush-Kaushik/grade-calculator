@@ -40,8 +40,7 @@
                 @if(Session::has('marks_list'))
                     @foreach (Session::get('marks_list') as $item)
                     <tr>
-                        {{-- <td>{{$item['course_item']}}</td> --}}
-                        <td>TEST</td>
+                        <td>{{$item['course_item']}}</td>
                         <td>{{$item['worth_percent']}}</td>
                         <td>{{$item['mark_percent']}}</td>        
                     </tr>
@@ -49,6 +48,10 @@
                 @endif
             </tbody>
           </table>
+
+          @if(Session::has('current_mark'))
+            <p>Your current Mark is {{Session::get('current_mark')}}%</p>
+          @endif
         <div>
         </div>
     </div>

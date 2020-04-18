@@ -27,16 +27,25 @@ class CalculatorController extends Controller
         );
 
         $marksList = session()->get('marks_list');
+
         if ($marksList == NULL or count($marksList) == 0) {
             $marksList = [];
-            array_push($marksList, $item);
-            session()->put('marks_list', $marksList);
-        } else {
-            print_r($marksList);
-            array_push($marksList, $item);
-            session()->put('marks_list', $marksList);
         }
 
+        array_push($marksList, $item);
+        session()->put('marks_list', $marksList);
+
+
+        /**
+         * calculate the grades and other information
+         */
+        $currentMark = 0.0;
+        foreach($marksList as $marks) {
+            $currentMark = $currentMark + ($marks['worth_percent'] * $marks['mark_percent']);
+            print_r($currentMark);
+        }
+
+        session()->put('current_mark', $currentMark);
         return view('calculator');
     }
 }

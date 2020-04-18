@@ -6,15 +6,15 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <div class="form-label"><label for="course_item">Course Item</label></div>
-                <div class="form-input"><input type="text" name="course_item"></div>
+                <div class="form-input"><input type="text" name="course_item" id="course_item"></div>
             </div>
             <div class="form-group">
                 <div class="form-label"><label for="worth_percent">Worth (in %)</label></div>
-                <div class="form-input"><input type="text" name="worth_percent"></div>
+                <div class="form-input"><input type="text" name="worth_percent" if="worth_percent"></div>
             </div>
             <div class="form-group">
                 <div class="form-label"><label for="mark_percent">Your Mark (in %)</label></div>
-                <div class="form-input"><input type="text" name="mark_percent"></div>
+                <div class="form-input"><input type="text" name="mark_percent" id="mark_percent"></div>
             </div>
             <button type="submit" class="btn btn-primary">Add Entry</button>
             <button class="btn btn-warning">Clear Entry</button>

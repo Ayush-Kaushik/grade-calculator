@@ -22,7 +22,7 @@ class CalculatorController extends Controller
         $marksList = session()->get('marks_list');
 
         if ($marksList == NULL or $marksList->empty()) {
-            session()->set('marks_list', []);
+            session()->put('marks_list', []);
         }
 
         return view('calculator', compact('marksList'));

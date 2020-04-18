@@ -38,11 +38,18 @@
             </thead>
             <tbody>
                 @if(Session::has('marks_list'))
-                    @foreach (Session::get('marks_list') as $item)
+                    @foreach (Session::get('marks_list') as $itemKey => $itemValue)
                     <tr>
-                        <td>{{$item['course_item']}}</td>
-                        <td>{{$item['worth_percent']}}</td>
-                        <td>{{$item['mark_percent']}}</td>        
+                        <td>{{$itemValue}}</td>
+                        <td>{{$itemValue}}</td>
+                        <td>{{$itemValue}}</td>  
+                        <td>
+                            <form action="{{ action('CalculatorController@destroy', $itemKey) }}" method="post">
+                                {{ method_field('DELETE') }}
+                                {{ csrf_field() }}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>      
                     </tr>
                     @endforeach
                 @endif

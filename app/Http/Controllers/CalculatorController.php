@@ -35,7 +35,6 @@ class CalculatorController extends Controller
         array_push($marksList, $item);
         session()->put('marks_list', $marksList);
 
-
         /**
          * calculate the grades and other information
          */
@@ -47,5 +46,17 @@ class CalculatorController extends Controller
 
         session()->put('current_mark', $currentMark);
         return view('calculator');
+    }
+
+    /**
+     * Remove a record from the table
+     */
+    public function destroy($id) {
+        $marksList = session()->get('marks_list');
+        
+        foreach($marksList as $item) {
+            if(item[])
+        }
+
     }
 }

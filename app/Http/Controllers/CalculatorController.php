@@ -35,6 +35,8 @@ class CalculatorController extends Controller
             session()->put('marks_list', $marksList);
         }
 
-        return view('calculator', compact('marksList'));
+        var_dump(session()->get('marks_list'));
+
+        // return view('calculator', compact('marksList'));
     }
 }

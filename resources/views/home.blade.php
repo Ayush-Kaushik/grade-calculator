@@ -1,5 +1,6 @@
 @extends('layout.main')
 @section('content')
+    <div class="parent-div">
         <form action="{{ action('HomeController@create') }}" method="post" class="form-group">
             {{ csrf_field() }}
             <div class="form-group">
@@ -8,4 +9,5 @@
                 <button type="submit" class="btn btn-success">Add</button>
             </div>
         </form>
+    <div>
 @endsection

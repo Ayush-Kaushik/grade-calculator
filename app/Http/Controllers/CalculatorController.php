@@ -38,6 +38,7 @@ class CalculatorController extends Controller
         $currentMark = $this->getCurrentMark($marksList);
         $finalExamWorth = $this->getFinalExamPercent($marksList);
         session()->put('current_mark', $currentMark);
+        session()->put('final_exam_worth', $finalExamWorth);
         return view('calculator');
     }
 

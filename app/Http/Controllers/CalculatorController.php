@@ -27,15 +27,14 @@ class CalculatorController extends Controller
         );
 
         $marksList = session()->get('marks_list');
-        array_push($marksList, $item);
-        session()->put('marks_list', $marksList);
+        var_dump($marksList);
 
-        // if ($marksList == NULL or $marksList->empty()) {
-        //     session()->put('marks_list', []);
-        // } else {
-        //     array_push($marksList, $item);
-        //     session()->put('marks_list', $marksList);
-        // }
+        if ($marksList == NULL or $marksList->empty()) {
+            session()->put('marks_list', []);
+        } else {
+            array_push($marksList, $item);
+            session()->put('marks_list', $marksList);
+        }
 
         var_dump(session()->get('marks_list'));
 

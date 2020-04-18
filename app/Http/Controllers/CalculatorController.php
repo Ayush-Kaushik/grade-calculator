@@ -26,11 +26,7 @@ class CalculatorController extends Controller
             "mark_percent" => $request->mark_percent
         );
 
-        print_r($item);
-
         $marksList = session()->get('marks_list');
-        print_r($marksList);
-
         if ($marksList == NULL or $marksList->empty()) {
             $marksList = [];
             array_push($marksList, $item);

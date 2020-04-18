@@ -48,6 +48,8 @@ class CalculatorController extends Controller
         foreach($marksList as $marks) {
             $currentMark = $currentMark + (($marks['worth_percent']/100) * $marks['mark_percent']);
         }
+
+        return $currentMark;
     }
 
     /**
@@ -56,7 +58,7 @@ class CalculatorController extends Controller
     public function destroy($id) {
         $marksList = session()->get('marks_list');
         unset($marksList[$id]);
-        
+
         $currentMark = $this->getCurrentMark($marksList);
         session()->put('current_mark', $currentMark);
         session()->put('marks_list', $marksList);

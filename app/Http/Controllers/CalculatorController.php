@@ -27,7 +27,7 @@ class CalculatorController extends Controller
         );
 
         $marksList = session()->get('marks_list');
-        if ($marksList == NULL or $marksList->empty()) {
+        if ($marksList == NULL or count($marksList) == 0) {
             $marksList = [];
             array_push($marksList, $item);
             session()->put('marks_list', $marksList);
@@ -35,7 +35,7 @@ class CalculatorController extends Controller
             array_push($marksList, $item);
             session()->put('marks_list', $marksList);
         }
-        
+
         return view('calculator');
     }
 }

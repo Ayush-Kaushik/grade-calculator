@@ -40,7 +40,8 @@
                 @if(Session::has('marks_list'))
                     @foreach (Session::get('marks_list') as $item)
                     <tr>
-                        <td>{{$item['course_item']}}</td>
+                        {{-- <td>{{$item['course_item']}}</td> --}}
+                        <td>TEST</td>
                         <td>{{$item['worth_percent']}}</td>
                         <td>{{$item['mark_percent']}}</td>        
                     </tr>

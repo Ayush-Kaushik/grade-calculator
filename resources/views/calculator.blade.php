@@ -2,26 +2,21 @@
 @section('content')
 <div class="container">
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h1 class="m-0 font-weight-bold text-primary">{{Session::get('course_title')}}</h1>
-        </div>
-
         <form action="{{ action('CalculatorController@create') }}" method="post" class="form-group">
             {{ csrf_field() }}
             <div class="form-group">
-                <div class="form-label"><label for="course_item">Course Item</label></div>
-                <div class="form-input"><input type="text" name="course_item" id="course_item"></div>
+                <input placeholder="Course Item ..." type="text" class="form-control form-control-user" name="course_item" id="course_item">
             </div>
+
             <div class="form-group">
-                <div class="form-label"><label for="worth_percent">Worth (in %)</label></div>
-                <div class="form-input"><input type="text" name="worth_percent" if="worth_percent"></div>
+                <input placeholder="Worth (in %)" class="form-control form-control-user" type="text" name="worth_percent" if="worth_percent">
             </div>
+
             <div class="form-group">
-                <div class="form-label"><label for="mark_percent">Your Mark (in %)</label></div>
-                <div class="form-input"><input type="text" name="mark_percent" id="mark_percent"></div>
+                <input placeholder="Your Mark (in %)" class="form-control form-control-user" type="text" name="mark_percent" id="mark_percent">
             </div>
-            <button type="submit" class="btn btn-primary">Add Entry</button>
-            <button class="btn btn-warning">Clear Entry</button>
+
+            <button type="submit" class="btn btn-success btn-user btn-block">Add Entry</button>
         </form>
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -32,7 +27,12 @@
                 </ul>
             </div>
         @endif
-        
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h3 class="m-0 font-weight-bold text-primary">{{Session::get('course_title')}}</h3>
+        </div>
+
         <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" width="100%" cellspacing="0">
@@ -41,6 +41,7 @@
                     <th scope="col">Item</th>
                     <th scope="col">Worth (in %)</th>
                     <th scope="col">Your Mark (in %)</th>
+                    <th scope="col">Actions</th>
                 </tr>
                 </thead>
                 <tbody>

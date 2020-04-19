@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="col-xl-8 col-lg-7">
-            <div class="card shadow mb-4">
+            <div class="card border-left-success py-2 shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Course Stats</h6>
                 </div>

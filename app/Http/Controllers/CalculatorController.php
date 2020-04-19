@@ -53,7 +53,7 @@ class CalculatorController extends Controller
     public function getCurrentMark($marksList) {
         $currentMark = 0.0;
         foreach($marksList as $marks) {
-            $currentMark = $currentMark + (($marks['worth_percent']/100) * $marks['mark_percent']);
+            $currentMark = $currentMark + (($marks['worth_percent']) * $marks['mark_percent']);
         }
 
         return $currentMark;
@@ -72,6 +72,9 @@ class CalculatorController extends Controller
         return (100.0 - $currentMark);
     }
 
+    /**
+     * calculate the values for stats table
+     */
     public function getFinalExamStats($marksList) {
         $currentMark = 0.0;
         $percentCovered = 0.0;

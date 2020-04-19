@@ -13,7 +13,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control form-control-user" name="course_name" placeholder="Enter course code ...">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-user btn-block">Add</button>
+                        <button type="submit" class="btn btn-success btn-user btn-block">Add</button>
                     </form>
                 </div>
                 </div>

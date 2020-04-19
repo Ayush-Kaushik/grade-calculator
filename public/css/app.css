@@ -19,6 +19,10 @@
     margin-top: 5px;
 }
 
+.alert-font {
+    font-size: 0.8rem;
+}
+
  :root {
     --blue: #4e73df;
     --indigo: #6610f2;

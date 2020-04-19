@@ -79,15 +79,20 @@ class CalculatorController extends Controller
      */
     public function getFinalExamStats($marksList) {
         $currentMark = 0.0;
-        $percentCovered = 0.0;
+        $currentWorth = 0.0;
+        $percentRemaining = 0.0;
+
         foreach($marksList as $marks) {
             $currentMark = $currentMark + (($marks['worth_percent']/100) * $marks['mark_percent']);
-            $percentCovered = $percentCovered + $marks['worth_percent'];
+            $currentWorth = $currentWorth + ($marks['worth_percent']/100);
         }
+
+        $currentPercentage = $currentMark/ $currentWorth;
+        $percentRemaining = 1 - $currentWorth;
 
         $finalStats = [];
         for( $i = 50; $i <= 100; $i = $i + 10) {
-            $finishWithScore = ($i - $currentMark) / $percentCovered;
+            $finishWithScore = ($i - ($currentWorth * $currentPercentage)) / $percentRemaining;
             $finalStats[$i] = $finishWithScore;
         }
 

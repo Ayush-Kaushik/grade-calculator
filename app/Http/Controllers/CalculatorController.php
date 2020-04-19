@@ -43,7 +43,6 @@ class CalculatorController extends Controller
         session()->put('current_mark', $currentMark);
         session()->put('final_exam_worth', $finalExamWorth);
         session()->put('final_exam_stats', $finalExamStats);
-        
         return view('calculator');
     }
 
@@ -56,6 +55,10 @@ class CalculatorController extends Controller
         foreach($marksList as $marks) {
             $currentMark = $currentMark + (($marks['worth_percent']/100) * $marks['mark_percent']);
             $currentWorth = $currentWorth + ($marks['worth_percent']/100);
+        }
+
+        if ($currentWorth == 0) {
+            return $currentMark;
         }
 
         return $currentMark/ $currentWorth;

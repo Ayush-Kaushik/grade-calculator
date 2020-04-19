@@ -3,7 +3,7 @@
 <div class="container page-spacing">
     <div class="row">
         <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
+            <div class="card border-left-success py-2 shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Enter Grades</h6>
                 </div>
@@ -60,14 +60,14 @@
     </div>
 
 
-    <div class="card shadow mb-4">
+    <div class="card shadow border-left-success py-2 mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">{{Session::get('course_title')}}</h6>
         </div>
 
         <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" width="100%" cellspacing="0">
+            <table class="table" width="100%" cellspacing="0">
                 <thead>
                 <tr>
                     <th scope="col">Item</th>
@@ -95,8 +95,6 @@
                     @endif
                 </tbody>
             </table>
-
-            
             <div>
             </div>
         </div>

@@ -3,6 +3,9 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-4 col-lg-5">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Enter Grades</h6>
+            </div>
             <div class="card shadow mb-4">
                 <form action="{{ action('CalculatorController@create') }}" method="post" class="user">
                     {{ csrf_field() }}
@@ -33,7 +36,9 @@
         </div>
         <div class="col-xl-8 col-lg-7">
             <div class="card shadow mb-4">
-                <div class="user">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Grades Stats</h6>
+                  </div>
                 <p>Your current Mark is {{Session::get('current_mark')}}%</p>
                 <p>Final exam worth {{Session::get('final_exam_worth')}}%</p>
     
@@ -42,7 +47,6 @@
                         <p>To finish with <b>{{$itemKey}}%</b> required on final: {{$itemValue}}%</p>
                     @endforeach
                 @endif
-                </div>
             </div>
         </div>
     </div>
@@ -50,7 +54,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h3 class="m-0 font-weight-bold text-primary">{{Session::get('course_title')}}</h3>
+            <h6 class="m-0 font-weight-bold text-primary">{{Session::get('course_title')}}</h6>
         </div>
 
         <div class="card-body">

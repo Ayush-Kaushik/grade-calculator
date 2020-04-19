@@ -52,11 +52,13 @@ class CalculatorController extends Controller
      */
     public function getCurrentMark($marksList) {
         $currentMark = 0.0;
+        $currentWorth = 0.0;
         foreach($marksList as $marks) {
-            $currentMark = $currentMark + (($marks['worth_percent']) * $marks['mark_percent']);
+            $currentMark = $currentMark + (($marks['worth_percent']/100) * $marks['mark_percent']);
+            $currentWorth = $currentWorth + ($marks['worth_percent']/100);
         }
 
-        return $currentMark;
+        return $currentMark/ $currentWorth;
     }
 
 

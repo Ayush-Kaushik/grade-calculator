@@ -7,6 +7,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Enter Grades</h6>
             </div>
             <div class="card shadow mb-4">
+                <div class="container">
                 <form action="{{ action('CalculatorController@create') }}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
@@ -32,6 +33,7 @@
                         </ul>
                     </div>
                 @endif
+                </div>
             </div>
         </div>
         <div class="col-xl-8 col-lg-7">

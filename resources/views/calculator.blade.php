@@ -40,10 +40,11 @@
         </div>
         <div class="col-xl-8 col-lg-7">
             <div class="card shadow mb-4">
-                <div class="container">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Course Stats</h6>
-                  </div>
+                </div>
+                <div class="card-body">
+                    <div class="container">
                 <p>Your current Mark is {{Session::get('current_mark')}}%</p>
                 <p>Final exam worth {{Session::get('final_exam_worth')}}%</p>
     
@@ -52,6 +53,7 @@
                         <p>To finish with <b>{{$itemKey}}%</b> required on final: {{$itemValue}}%</p>
                     @endforeach
                 @endif
+                    </div>
                 </div>
             </div>
         </div>

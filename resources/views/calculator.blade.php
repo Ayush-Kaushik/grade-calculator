@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-xl-4 col-lg-5">
             <div class="card shadow mb-4">
-                <form action="{{ action('CalculatorController@create') }}" method="post">
+                <form action="{{ action('CalculatorController@create') }}" method="post" class="user">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <input placeholder="Course Item ..." type="text" class="form-control form-control-user" name="course_item" id="course_item">

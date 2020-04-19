@@ -14,35 +14,26 @@
                         <div class="form-group">
                             <input placeholder="Course Item ..." type="text" class="form-control form-control-user" name="course_item" id="course_item">
                             @error('course_item')
-                                <div class="border-left-danger alert alert-danger alert-spacing">{{ $message }}</div>
+                                <div class="border-left-danger alert alert-danger alert-spacing alert-font">{{ $message }}</div>
                             @enderror
                         </div>
             
                         <div class="form-group">
                             <input placeholder="Worth (in %)" class="form-control form-control-user" type="text" name="worth_percent" if="worth_percent">
                             @error('worth_percent')
-                                <div class="border-left-danger alert alert-danger alert-spacing">{{ $message }}</div>
+                                <div class="border-left-danger alert alert-danger alert-spacing alert-font">{{ $message }}</div>
                             @enderror
                         </div>
             
                         <div class="form-group">
                             <input placeholder="Your Mark (in %)" class="form-control form-control-user" type="text" name="mark_percent" id="mark_percent">
                             @error('mark_percent')
-                                <div class="border-left-danger alert alert-danger alert-spacing">{{ $message }}</div>
+                                <div class="border-left-danger alert alert-danger alert-spacing alert-font">{{ $message }}</div>
                             @enderror
                         </div>
             
                         <button type="submit" class="btn btn-success btn-user btn-block">Add Entry</button>
                     </form>
-                    {{-- @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif --}}
                     </div>
                 </div>
             </div>

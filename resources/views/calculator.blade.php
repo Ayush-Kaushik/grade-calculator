@@ -14,21 +14,21 @@
                         <div class="form-group">
                             <input placeholder="Course Item ..." type="text" class="form-control form-control-user" name="course_item" id="course_item">
                             @error('course_item')
-                                <div class="alert-danger">{{ $message }}</div>
+                                <div class="border-left-danger">{{ $message }}</div>
                             @enderror
                         </div>
             
                         <div class="form-group">
                             <input placeholder="Worth (in %)" class="form-control form-control-user" type="text" name="worth_percent" if="worth_percent">
                             @error('worth_percent')
-                                <div class="border-left-error">{{ $message }}</div>
+                                <div class="border-left-danger">{{ $message }}</div>
                             @enderror
                         </div>
             
                         <div class="form-group">
                             <input placeholder="Your Mark (in %)" class="form-control form-control-user" type="text" name="mark_percent" id="mark_percent">
                             @error('mark_percent')
-                                <div class="alert-danger">{{ $message }}</div>
+                                <div class="border-left-danger">{{ $message }}</div>
                             @enderror
                         </div>
             

@@ -7,7 +7,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Enter Grades</h6>
             </div>
             <div class="card shadow mb-4">
-                <form action="{{ action('CalculatorController@create') }}" method="post" class="user">
+                <form action="{{ action('CalculatorController@create') }}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <input placeholder="Course Item ..." type="text" class="form-control form-control-user" name="course_item" id="course_item">
@@ -37,7 +37,7 @@
         <div class="col-xl-8 col-lg-7">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Grades Stats</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Course Stats</h6>
                   </div>
                 <p>Your current Mark is {{Session::get('current_mark')}}%</p>
                 <p>Final exam worth {{Session::get('final_exam_worth')}}%</p>

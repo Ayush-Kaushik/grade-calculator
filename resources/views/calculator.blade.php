@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('content')
-<div class="container">
+<div class="container page-spacing">
     <div class="row">
         <div class="col-xl-4 col-lg-5">
             <div class="card shadow mb-4">
@@ -8,7 +8,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Enter Grades</h6>
             </div>
                 <div class="card shadow mb-4">
-                    <div class="card-inner">
+                    <div class="container">
                     <form action="{{ action('CalculatorController@create') }}" method="post">
                         {{ csrf_field() }}
                         <div class="form-group">
@@ -40,6 +40,7 @@
         </div>
         <div class="col-xl-8 col-lg-7">
             <div class="card shadow mb-4">
+                <div class="container">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Course Stats</h6>
                   </div>
@@ -51,6 +52,7 @@
                         <p>To finish with <b>{{$itemKey}}%</b> required on final: {{$itemValue}}%</p>
                     @endforeach
                 @endif
+                </div>
             </div>
         </div>
     </div>

@@ -16,8 +16,8 @@ class CalculatorController extends Controller
     {
         $this->validate($request, [
             'course_item' => 'required',
-            'worth_percent' => 'required|numeric|between:0,100.00',
-            'mark_percent' => 'required|numeric|between:0,100.00'
+            'worth_percent' => 'required|numeric',
+            'mark_percent' => 'required|numeric'
         ]);
 
         $item = array(

@@ -3,36 +3,38 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Enter Grades</h6>
             </div>
-            <div class="card shadow mb-4">
-                <div class="container">
-                <form action="{{ action('CalculatorController@create') }}" method="post">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <input placeholder="Course Item ..." type="text" class="form-control form-control-user" name="course_item" id="course_item">
+                <div class="card shadow mb-4">
+                    <div class="card-inner">
+                    <form action="{{ action('CalculatorController@create') }}" method="post">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <input placeholder="Course Item ..." type="text" class="form-control form-control-user" name="course_item" id="course_item">
+                        </div>
+            
+                        <div class="form-group">
+                            <input placeholder="Worth (in %)" class="form-control form-control-user" type="text" name="worth_percent" if="worth_percent">
+                        </div>
+            
+                        <div class="form-group">
+                            <input placeholder="Your Mark (in %)" class="form-control form-control-user" type="text" name="mark_percent" id="mark_percent">
+                        </div>
+            
+                        <button type="submit" class="btn btn-success btn-user btn-block">Add Entry</button>
+                    </form>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     </div>
-        
-                    <div class="form-group">
-                        <input placeholder="Worth (in %)" class="form-control form-control-user" type="text" name="worth_percent" if="worth_percent">
-                    </div>
-        
-                    <div class="form-group">
-                        <input placeholder="Your Mark (in %)" class="form-control form-control-user" type="text" name="mark_percent" id="mark_percent">
-                    </div>
-        
-                    <button type="submit" class="btn btn-success btn-user btn-block">Add Entry</button>
-                </form>
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
                 </div>
             </div>
         </div>

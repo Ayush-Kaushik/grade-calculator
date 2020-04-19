@@ -21,7 +21,7 @@
                         <div class="form-group">
                             <input placeholder="Worth (in %)" class="form-control form-control-user" type="text" name="worth_percent" if="worth_percent">
                             @error('worth_percent')
-                                <div class="alert-danger">{{ $message }}</div>
+                                <div class="border-left-error">{{ $message }}</div>
                             @enderror
                         </div>
             

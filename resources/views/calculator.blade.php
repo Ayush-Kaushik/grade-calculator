@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-xl-4 col-lg-5">
             <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Enter Grades</h6>
-            </div>
-                <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Enter Grades</h6>
+                </div>
+                <div class="card-body">
                     <div class="container">
                     <form action="{{ action('CalculatorController@create') }}" method="post">
                         {{ csrf_field() }}
@@ -45,14 +45,14 @@
                 </div>
                 <div class="card-body">
                     <div class="container">
-                <p>Your current Mark is {{Session::get('current_mark')}}%</p>
-                <p>Final exam worth {{Session::get('final_exam_worth')}}%</p>
-    
-                @if(Session::has('final_exam_stats'))
-                    @foreach (Session::get('final_exam_stats') as $itemKey => $itemValue)
-                        <p>To finish with <b>{{$itemKey}}%</b> required on final: {{$itemValue}}%</p>
-                    @endforeach
-                @endif
+                        <p>Your current Mark is {{Session::get('current_mark')}}%</p>
+                        <p>Final exam worth {{Session::get('final_exam_worth')}}%</p>
+        
+                        @if(Session::has('final_exam_stats'))
+                            @foreach (Session::get('final_exam_stats') as $itemKey => $itemValue)
+                                <p>To finish with <b>{{$itemKey}}%</b> required on final: {{$itemValue}}%</p>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>

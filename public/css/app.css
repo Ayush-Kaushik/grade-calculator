@@ -15,6 +15,9 @@
     margin-top: 20px;
 }
 
+.alert-spacing {
+    margin-top: 5px;
+}
 
  :root {
     --blue: #4e73df;

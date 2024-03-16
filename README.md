@@ -1,4 +1,4 @@
-## Grade Calculation Application
+## Grade Goal Calculator
 This application is built using PHP based framework - Laravel
 
 ## How to use the application

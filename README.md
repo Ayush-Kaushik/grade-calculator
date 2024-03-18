@@ -1,16 +1,16 @@
 # Grade Goal Calculator
 
-## Motivation
+## 💡💡 Motivation
 During my university days, I always used the UofG Mark Calculator: https://www.lib.uoguelph.ca/writing-studying/studying-resources-workshops/mark-calculator/ to keep track of my progress. Moreover, I was fascinated by the calculations and technology used to build it. Hence, I started working on this project to learn more about the calculations behind it.
 
 There is no specific reason to pick Laravel other than challenging myself to learn something new! 
 
-## Prerequisites
+## 📖📖 Prerequisites
 Before running the application, ensure you have the following installed:
 - PHP (version 7.4 or higher)
 - Composer
 
-## Installation
+## ⚙️⚙️ Installation
 - Clone this repository to your local machine:
 ```
 git clone https://github.com/Ayush-Kaushik/grade-calculator.git
@@ -25,7 +25,7 @@ cd grade-calculator
 composer install
 ```
 
-## Configuration
+## 📋📋 Configuration
 - Create a `.env` file inside grade-calculator directory
 - Copy the .env.example file to .env:
 ```
@@ -37,7 +37,7 @@ php artisan key:generate
 ```
 - This application does not require database configuration so it can be left to default (same as env.example)
 
-## Running the application locally
+## 🏃‍♂️🏃‍♂️ Running the application locally
 - Navigate to project directory
 - Run the following command:
 ```
@@ -57,7 +57,7 @@ Starting Laravel development server: http://127.0.0.1:8000
 - Go to your browser and access the link: http://127.0.0.1:8000
 
 
-## How to use Grade Goal Calculator
+## 🚀🚀 How to use Grade Goal Calculator
 1. Go to the calculator application here: https://grade-goal-calculator.vercel.app/
 2. Enter the name of the course on the main screen ![Welcome Screen](./.docs/images/WelcomeScreen.png)
 3. Click Add button and it will redirect you to main application screen: ![Calculator Screen](./.docs/images/CalculatorScreen.png)
@@ -67,9 +67,9 @@ Starting Laravel development server: http://127.0.0.1:8000
 ![Final Grades Screen](./.docs/images/FinalGrades.png)
 6. In case you make an error in the grades, simply click delete button to remove that entry and the calculate will automatically calculate your upgraded course stats.
 
-## Future Plans
+## 🎯🎯 Future Plans
 - Download the course stats in PDF, TXT and EXCEL formats
 - Support multiple courses at once
 
-## Contributing
+## 🙌🙌 Contributing
 Contributions are welcome!
